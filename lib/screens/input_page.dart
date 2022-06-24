@@ -1,11 +1,12 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, camel_case_types
 
-import 'package:bmi_calculator/calculator_brain.dart';
+import 'package:bmi_calculator/components/calculator_brain.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:bmi_calculator/ReusableCard.dart';
-import 'package:bmi_calculator/IconContent.dart';
-import 'constants.dart';
+import 'package:bmi_calculator/components/reusable_card.dart';
+import 'package:bmi_calculator/components/icon_content.dart';
+import 'package:bmi_calculator/constants.dart';
+import 'package:bmi_calculator/components/round_icon_button.dart';
 
 class InputPage extends StatefulWidget {
   const InputPage({Key? key}) : super(key: key);
@@ -220,24 +221,6 @@ class _InputPageState extends State<InputPage> {
           ),
         ),
       ),
-    );
-  }
-}
-
-class roundIconButton extends StatelessWidget {
-  const roundIconButton(
-      {required this.icon, required this.onPressed, super.key});
-  final IconData icon;
-  final void Function() onPressed;
-  @override
-  Widget build(BuildContext context) {
-    return RawMaterialButton(
-      onPressed: onPressed,
-      shape: CircleBorder(),
-      elevation: 6.0,
-      fillColor: Color(0xFF4C4551),
-      constraints: BoxConstraints.tightFor(width: 56.0, height: 56.0),
-      child: Icon(icon),
     );
   }
 }
